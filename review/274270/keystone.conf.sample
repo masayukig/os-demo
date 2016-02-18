@@ -1,7 +1,7 @@
 [DEFAULT]
 
 #
-# From keystone
+# From keystone 9.0.0.0b3.dev280
 #
 
 # A "shared secret" that can be used to bootstrap Keystone. This "token" does
@@ -109,7 +109,7 @@
 #notification_opt_out =
 
 #
-# From oslo.log
+# From oslo.log 3.0.0
 #
 
 # If set to true, the logging level will be set to DEBUG instead of the default
@@ -213,7 +213,7 @@
 #fatal_deprecations = false
 
 #
-# From oslo.messaging
+# From oslo.messaging 4.3.0
 #
 
 # Size of RPC connection pool. (integer value)
@@ -320,7 +320,7 @@
 [assignment]
 
 #
-# From keystone
+# From keystone 9.0.0.0b3.dev280
 #
 
 # Entrypoint for the assignment backend driver in the keystone.assignment
@@ -335,7 +335,7 @@
 [auth]
 
 #
-# From keystone
+# From keystone 9.0.0.0b3.dev280
 #
 
 # Allowed authentication methods. (list value)
@@ -362,7 +362,7 @@
 [cache]
 
 #
-# From oslo.cache
+# From oslo.cache 1.3.0
 #
 
 # Prefix for building the configuration dictionary for the cache region. This
@@ -429,7 +429,7 @@
 [catalog]
 
 #
-# From keystone
+# From keystone 9.0.0.0b3.dev280
 #
 
 # Catalog template file name for use with the template catalog backend. (string
@@ -457,7 +457,7 @@
 [cors]
 
 #
-# From oslo.middleware
+# From oslo.middleware 3.6.0
 #
 
 # Indicate whether this resource may be shared with the domain received in the
@@ -485,7 +485,7 @@
 [cors.subdomain]
 
 #
-# From oslo.middleware
+# From oslo.middleware 3.6.0
 #
 
 # Indicate whether this resource may be shared with the domain received in the
@@ -513,7 +513,7 @@
 [credential]
 
 #
-# From keystone
+# From keystone 9.0.0.0b3.dev280
 #
 
 # Entrypoint for the credential backend driver in the keystone.credential
@@ -524,7 +524,7 @@
 [database]
 
 #
-# From oslo.db
+# From oslo.db 4.5.0
 #
 
 # The file name to use with SQLite. (string value)
@@ -624,7 +624,7 @@
 [domain_config]
 
 #
-# From keystone
+# From keystone 9.0.0.0b3.dev280
 #
 
 # Entrypoint for the domain config backend driver in the
@@ -643,7 +643,7 @@
 [endpoint_filter]
 
 #
-# From keystone
+# From keystone 9.0.0.0b3.dev280
 #
 
 # Entrypoint for the endpoint filter backend driver in the
@@ -657,7 +657,7 @@
 [endpoint_policy]
 
 #
-# From keystone
+# From keystone 9.0.0.0b3.dev280
 #
 
 # Enable endpoint_policy functionality. (boolean value)
@@ -676,7 +676,7 @@
 [eventlet_server]
 
 #
-# From keystone
+# From keystone 9.0.0.0b3.dev280
 #
 
 # The number of worker processes to serve the public eventlet application.
@@ -754,7 +754,7 @@
 [eventlet_server_ssl]
 
 #
-# From keystone
+# From keystone 9.0.0.0b3.dev280
 #
 
 # Toggle for SSL support on the Keystone eventlet servers. (boolean value)
@@ -793,7 +793,7 @@
 [federation]
 
 #
-# From keystone
+# From keystone 9.0.0.0b3.dev280
 #
 
 # Entrypoint for the federation backend driver in the keystone.federation
@@ -830,7 +830,7 @@
 [fernet_tokens]
 
 #
-# From keystone
+# From keystone 9.0.0.0b3.dev280
 #
 
 # Directory containing Fernet token keys. (string value)
@@ -847,7 +847,7 @@
 [identity]
 
 #
-# From keystone
+# From keystone 9.0.0.0b3.dev280
 #
 
 # This references the domain to use for all Identity API v2 requests (which are
@@ -902,7 +902,7 @@
 [identity_mapping]
 
 #
-# From keystone
+# From keystone 9.0.0.0b3.dev280
 #
 
 # Entrypoint for the identity mapping backend driver in the
@@ -933,7 +933,7 @@
 [kvs]
 
 #
-# From keystone
+# From keystone 9.0.0.0b3.dev280
 #
 
 # Extra dogpile.cache backend modules to register with the dogpile.cache
@@ -957,7 +957,7 @@
 [ldap]
 
 #
-# From keystone
+# From keystone 9.0.0.0b3.dev280
 #
 
 # URL(s) for connecting to the LDAP server. Multiple LDAP URLs may be specified
@@ -1206,7 +1206,7 @@
 [matchmaker_redis]
 
 #
-# From oslo.messaging
+# From oslo.messaging 4.3.0
 #
 
 # Host to locate redis. (string value)
@@ -1240,7 +1240,7 @@
 [memcache]
 
 #
-# From keystone
+# From keystone 9.0.0.0b3.dev280
 #
 
 # Memcache servers in the format of "host:port". (list value)
@@ -1275,7 +1275,7 @@
 [oauth1]
 
 #
-# From keystone
+# From keystone 9.0.0.0b3.dev280
 #
 
 # Entrypoint for the OAuth backend driver in the keystone.oauth1 namespace.
@@ -1292,7 +1292,7 @@
 [os_inherit]
 
 #
-# From keystone
+# From keystone 9.0.0.0b3.dev280
 #
 
 # role-assignment inheritance to projects from owning domain or from projects
@@ -1310,7 +1310,7 @@
 [oslo_messaging_amqp]
 
 #
-# From oslo.messaging
+# From oslo.messaging 4.3.0
 #
 
 # address prefix used when sending to a specific server (string value)
@@ -1381,7 +1381,7 @@
 [oslo_messaging_notifications]
 
 #
-# From oslo.messaging
+# From oslo.messaging 4.3.0
 #
 
 # The Drivers(s) to handle sending notifications. Possible values are
@@ -1403,7 +1403,7 @@
 [oslo_messaging_rabbit]
 
 #
-# From oslo.messaging
+# From oslo.messaging 4.3.0
 #
 
 # Use durable queues in AMQP. (boolean value)
@@ -1536,7 +1536,7 @@
 [oslo_middleware]
 
 #
-# From oslo.middleware
+# From oslo.middleware 3.6.0
 #
 
 # The maximum body size for each  request, in bytes. (integer value)
@@ -1555,7 +1555,7 @@
 [oslo_policy]
 
 #
-# From oslo.policy
+# From oslo.policy 1.4.0
 #
 
 # The JSON file that defines policies. (string value)
@@ -1578,7 +1578,7 @@
 [paste_deploy]
 
 #
-# From keystone
+# From keystone 9.0.0.0b3.dev280
 #
 
 # Name of the paste configuration file that defines the available pipelines.
@@ -1589,7 +1589,7 @@
 [policy]
 
 #
-# From keystone
+# From keystone 9.0.0.0b3.dev280
 #
 
 # Entrypoint for the policy backend driver in the keystone.policy namespace.
@@ -1604,7 +1604,7 @@
 [resource]
 
 #
-# From keystone
+# From keystone 9.0.0.0b3.dev280
 #
 
 # Entrypoint for the resource backend driver in the keystone.resource
@@ -1657,7 +1657,7 @@
 [revoke]
 
 #
-# From keystone
+# From keystone 9.0.0.0b3.dev280
 #
 
 # Entrypoint for an implementation of the backend for persisting revocation
@@ -1683,7 +1683,7 @@
 [role]
 
 #
-# From keystone
+# From keystone 9.0.0.0b3.dev280
 #
 
 # Entrypoint for the role backend driver in the keystone.role namespace.
@@ -1706,7 +1706,7 @@
 [saml]
 
 #
-# From keystone
+# From keystone 9.0.0.0b3.dev280
 #
 
 # Default TTL, in seconds, for any generated SAML assertion created by
@@ -1782,7 +1782,7 @@
 [signing]
 
 #
-# From keystone
+# From keystone 9.0.0.0b3.dev280
 #
 
 # Path of the certfile for token signing. For non-production environments, you
@@ -1844,7 +1844,7 @@
 [ssl]
 
 #
-# From keystone
+# From keystone 9.0.0.0b3.dev280
 #
 
 # Path of the CA key file for SSL. (string value)
@@ -1865,7 +1865,7 @@
 [token]
 
 #
-# From keystone
+# From keystone 9.0.0.0b3.dev280
 #
 
 # External auth mechanisms that should add bind information to token, e.g.,
@@ -1929,7 +1929,7 @@
 [tokenless_auth]
 
 #
-# From keystone
+# From keystone 9.0.0.0b3.dev280
 #
 
 # The list of trusted issuers to further filter the certificates that are
@@ -1955,7 +1955,7 @@
 [trust]
 
 #
-# From keystone
+# From keystone 9.0.0.0b3.dev280
 #
 
 # Delegation and impersonation features can be optionally disabled. (boolean
