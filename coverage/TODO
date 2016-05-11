@@ -1,0 +1,17 @@
+
+Download status.json to /tmp
+
+
+https://docs.python.org/2/library/functools.html#functools.total_ordering
+
+
+def order_json(json_obj):	196
+    """Sort the json object so that it can be compared properly."""	197
+    if isinstance(json_obj, list):	198
+        return sorted(order_json(elem) for elem in json_obj)	199
+    if isinstance(json_obj, dict):	200
+       return sorted(	201
+                    (key, order_json(value))	202
+	for key, value in json_obj.items())	203
+   else:	204
+        return json_obj	205

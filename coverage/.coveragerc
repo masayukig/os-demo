@@ -1,0 +1,10 @@
+[run]
+branch = True
+omit = */bs4/*
+
+[report]
+ignore-errors = True
+precision = 2
+
+[html]
+directory = cover

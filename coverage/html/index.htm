@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="OpenStack Code Coverage">
+  <meta name="author" content="Ronald Bradford">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  <title>OpenStack Code Coverage</title>
+
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <h1>Code Coverage Index</h1>
+  <div class="well">Coverage Projects: <b><span id="cnt"></span></b></div>
+  <div id="links"></div>
+</body>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js" type="text/javascript"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.23.3/js/jquery.tablesorter.min.js"> type="text/javascript"></script>
+<script type="text/javascript">
+
+$(document).ready(function() {
+  file="links.json";
+  $.ajax({
+    method: "GET",
+    url: file,
+    success: function(json, textStatus, jqXHR) {
+      console.log("loaded " + file);
+      if (json) {
+          html ="<table class='table table-bordered table-striped'>"
+          html +="<thead><tr><th>Project</th><th class='text-center'>Coverage</th><th>Available</th></tr></thead><tbody>";
+          for (i=0; i < json.length; i++) {
+              row = json[i]
+              html += "<tr><td><a href='" + row.url + "'>" + row.project + 
+                       "</a></td><td class='text-center'>" + row.percent + 
+                       " % </td><td>" + new Date(row.created * 1000) + "</td>" +
+                       "</tr>";
+          }
+          html += "</tbody></table>"
+          $('#links').empty().append(html);
+          $('#cnt').empty().append(json.length);
+
+          $('table', '#links').tablesorter({sortList: [[0,0]]});
+      }
+      
+    }, // success
+    error: function(jqXhr, textStatus, errorThrown ){
+      console.log("Error loading file " + file + " " + textStatus);
+      return;
+    } // error
+  }); // .ajax
+});
+
+
+</script>
+</html>
+
