@@ -23,11 +23,11 @@
   <div id="links"></div>
 </body>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js" type="text/javascript"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.23.3/js/jquery.tablesorter.min.js"> type="text/javascript"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.23.3/js/jquery.tablesorter.min.js" type="text/javascript"></script>
 <script type="text/javascript">
 
 $(document).ready(function() {
-  file="links.json";
+  file="../links.json";
   $.ajax({
     method: "GET",
     url: file,
@@ -38,8 +38,8 @@ $(document).ready(function() {
           html +="<thead><tr><th>Project</th><th class='text-center'>Coverage</th><th>Available</th></tr></thead><tbody>";
           for (i=0; i < json.length; i++) {
               row = json[i]
-              html += "<tr><td><a href='" + row.url + "'>" + row.project + 
-                       "</a></td><td class='text-center'>" + row.percent + 
+              html += "<tr><td><a href='" + row.url + "'>" + row.project +
+                       "</a></td><td class='text-center'>" + row.percent +
                        " % </td><td>" + new Date(row.created * 1000) + "</td>" +
                        "</tr>";
           }
@@ -49,7 +49,7 @@ $(document).ready(function() {
 
           $('table', '#links').tablesorter({sortList: [[0,0]]});
       }
-      
+
     }, // success
     error: function(jqXhr, textStatus, errorThrown ){
       console.log("Error loading file " + file + " " + textStatus);
@@ -61,4 +61,3 @@ $(document).ready(function() {
 
 </script>
 </html>
-
